@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Button from "../components/button/button-component";
@@ -82,22 +82,32 @@ const ControlInput = styled.input`
   }
 `;
 
-const DashboardPage = () => (
-  <Container>
-    <DisplayConsole />
-    <ControlConsole>
-      <ControlConsoleDivider>
-        <Button text="Capsules" />
-      </ControlConsoleDivider>
-      <ControlConsoleImgContainer>
-        <Rocket />
-      </ControlConsoleImgContainer>
-      <ControlConsoleDivider>
-        <ControlInput />
-        <Button text="Landing Pad" />
-      </ControlConsoleDivider>
-    </ControlConsole>
-  </Container>
-);
+const DashboardPage = () => {
+  const [capsules, setCapsules] = useState(null);
+  useEffect(() => {
+    fetch("http://localhost:4000/capsules")
+      .then((response) => response.json())
+      .then((data) => setCapsules(data));
+  }, []);
+
+  console.log(capsules);
+  return (
+    <Container>
+      <DisplayConsole />
+      <ControlConsole>
+        <ControlConsoleDivider>
+          <Button text="Capsules" />
+        </ControlConsoleDivider>
+        <ControlConsoleImgContainer>
+          <Rocket />
+        </ControlConsoleImgContainer>
+        <ControlConsoleDivider>
+          <ControlInput />
+          <Button text="Landing Pad" />
+        </ControlConsoleDivider>
+      </ControlConsole>
+    </Container>
+  );
+};
 
 export default DashboardPage;
