@@ -4,8 +4,8 @@ import styled from "styled-components";
 const StyledButton = styled.button`
   background-color: "red";
   margin: 10px;
-  width: 80%;
   height: 80%;
+  min-width: 10vw;
 `;
 
 const Button = () => <StyledButton />;

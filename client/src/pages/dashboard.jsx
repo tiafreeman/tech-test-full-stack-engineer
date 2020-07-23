@@ -30,16 +30,34 @@ const ControlConsole = styled.div`
   justify-content: center;
   height: 30%;
   width: auto;
-  margin: 8px;
+  margin: 10px;
 `;
 
 const ControlConsoleDivider = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   outline: 1px solid black;
   background-color: purple;
   height: 100%;
-  width: 33%;
+  width: 100%;
+`;
+
+const ControlConsoleImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  outline: 1px solid black;
+  background-color: purple;
+  height: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+`;
+
+const ControlInput = styled.input`
+  height: 50%;
+  width: 10vw;
+  margin: 10px;
+  font-size: 1em;
 `;
 
 const DashboardPage = () => (
@@ -49,10 +67,11 @@ const DashboardPage = () => (
       <ControlConsoleDivider>
         <Button />
       </ControlConsoleDivider>
-      <ControlConsoleDivider>
+      <ControlConsoleImgContainer>
         <Rocket />
-      </ControlConsoleDivider>
+      </ControlConsoleImgContainer>
       <ControlConsoleDivider>
+        <ControlInput />
         <Button />
       </ControlConsoleDivider>
     </ControlConsole>
