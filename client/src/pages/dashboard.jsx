@@ -49,8 +49,8 @@ const ControlConsoleImgContainer = styled.div`
   outline: 1px solid black;
   background-color: purple;
   height: 100%;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 4vw;
+  padding-right: 4vw;
 `;
 
 const ControlInput = styled.input`
@@ -65,14 +65,14 @@ const DashboardPage = () => (
     <DisplayConsole />
     <ControlConsole>
       <ControlConsoleDivider>
-        <Button />
+        <Button text="Capsules" />
       </ControlConsoleDivider>
       <ControlConsoleImgContainer>
         <Rocket />
       </ControlConsoleImgContainer>
       <ControlConsoleDivider>
         <ControlInput />
-        <Button />
+        <Button text="Landing Pad" />
       </ControlConsoleDivider>
     </ControlConsole>
   </Container>
