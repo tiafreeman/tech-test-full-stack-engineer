@@ -12,6 +12,12 @@ const Container = styled.div`
   background-color: white;
   margin-top: 25vh;
   margin-left: 25vw;
+  @media (max-width: 1200px) {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    flex-direction: row;
+  }
 `;
 
 const DisplayConsole = styled.div`
@@ -22,6 +28,10 @@ const DisplayConsole = styled.div`
   width: auto;
   margin: 10px;
   background-color: red;
+  @media (max-width: 1200px) {
+    width: 66%;
+    height: auto;
+  }
 `;
 
 const ControlConsole = styled.div`
@@ -31,6 +41,11 @@ const ControlConsole = styled.div`
   height: 30%;
   width: auto;
   margin: 10px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    height: auto;
+    width: 30vw;
+  }
 `;
 
 const ControlConsoleDivider = styled.div`
@@ -41,6 +56,9 @@ const ControlConsoleDivider = styled.div`
   background-color: purple;
   height: 100%;
   width: 100%;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 const ControlConsoleImgContainer = styled.div`
@@ -58,6 +76,10 @@ const ControlInput = styled.input`
   width: 10vw;
   margin: 10px;
   font-size: 1em;
+  @media (max-width: 1200px) {
+    height: 30%;
+    width: 90%;
+  }
 `;
 
 const DashboardPage = () => (
