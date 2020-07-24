@@ -12,11 +12,7 @@ function DashboardPage(props) {
     props.loadCapsules();
   }, []);
   const capsules = useSelector((state) => state.capsules);
-  return (
-    <Container>
-      <ControlConsole capsuleData={capsules} />
-    </Container>
-  );
+  return <ControlConsole capsuleData={capsules} />;
 }
 
 const mapDispatchToProps = {

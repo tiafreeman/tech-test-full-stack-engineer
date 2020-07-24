@@ -53,7 +53,7 @@ const Container = styled.div`
   flex-direction: column;
   width: 50vw;
   height: 50vh;
-  background-color: white;
+  background-color: grey;
   margin-top: 25vh;
   margin-left: 25vw;
   @media (max-width: 1200px) {
@@ -70,7 +70,8 @@ const DisplayConsoleContainer = styled.div`
   height: 66%;
   width: auto;
   margin: 10px;
-  background-color: red;
+  overflow: scroll;
+  background-color: white;
   @media (max-width: 1200px) {
     width: 66%;
     height: auto;

@@ -1,5 +1,6 @@
-import React from "react";
-import Button from "../button/button";
+import React, { useState } from "react";
+import { StyledButton } from "../button/button";
+import ListCard from "../list-card/list-card";
 import {
   Container,
   ControlConsoleContainer,
@@ -11,19 +12,30 @@ import {
 import { ReactComponent as Rocket } from "../../assets/rocket.svg";
 
 const ControlConsole = (capsuleData) => {
+  const [showResults, setShowResults] = useState(false);
+  const onClick = () => setShowResults(!showResults);
   return (
     <Container>
-      <DisplayConsoleContainer></DisplayConsoleContainer>
+      {showResults ? (
+        <DisplayConsoleContainer>
+          {capsuleData.capsuleData.map((capsule) => (
+            <ListCard capsuleData={capsule} />
+          ))}
+        </DisplayConsoleContainer>
+      ) : (
+        <DisplayConsoleContainer />
+      )}
+
       <ControlConsoleContainer>
         <ControlConsoleDivider>
-          <Button text="Capsules" />
+          <StyledButton onClick={onClick}>Capsules</StyledButton>
         </ControlConsoleDivider>
         <ControlConsoleImgContainer>
           <Rocket />
         </ControlConsoleImgContainer>
         <ControlConsoleDivider>
           <ControlInput />
-          <Button text="Landing Pad" />
+          <StyledButton>Launch Pad</StyledButton>
         </ControlConsoleDivider>
       </ControlConsoleContainer>
     </Container>
