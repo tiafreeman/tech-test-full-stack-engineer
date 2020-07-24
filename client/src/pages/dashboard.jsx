@@ -1,22 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
-import { DisplayConsole } from "../components/display-console/styles";
+import { connect, useSelector } from "react-redux";
+import { loadCapsules } from "../redux/capsules/capsules.actions";
+
+import DisplayConsole from "../components/display-console/display-console";
 import ControlConsole from "../components/control-console/control-console";
+import { Container } from "./styles";
 
-const DashboardPage = () => {
-  const [capsules, setCapsules] = useState(null);
+function DashboardPage(props) {
   useEffect(() => {
-    fetch("http://localhost:4000/capsules")
-      .then((response) => response.json())
-      .then((data) => setCapsules(data));
+    props.loadCapsules();
   }, []);
-
+  const capsules = useSelector((state) => state.capsules);
   return (
     <Container>
-      <DisplayConsole />
-      <ControlConsole />
+      <ControlConsole capsuleData={capsules} />
     </Container>
   );
+}
+
+const mapDispatchToProps = {
+  loadCapsules,
 };
 
-export default DashboardPage;
+export default connect(null, mapDispatchToProps)(DashboardPage);
