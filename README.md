@@ -1,4 +1,17 @@
 
+Hello!
+
+This is my attempt at your challenge - I only had time this week to implement one part of it (the displaying the capules portion) but it should give you a good indication of my skill level and where I'm at
+
+I know that you have typically been interviewing more senior people than me for this role, but I'm a very fast learner
+
+You'll see that I've used hooks and Redux in this solution, as well as kept a (reasonable) good commit history 
+
+Overall though, I wanted to say I really enjoyed this project! Much more engaging than some challenges you get and not too much work
+
+Thanks for your time :) Any feedback appreciated! 
+
+
 # We are building a space airport - Tech Challenge
 
 We have been very busy for the past 12 months building aircraft hangars, digging safety tunnels and shafts, closing deals with NASA, SpaceX and ISA. Everything is almost ready and as a consequence of our partnership with SpaceX, we need to build our Ground Control flight dashboard to support their needs.
