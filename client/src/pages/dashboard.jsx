@@ -3,9 +3,7 @@ import React, { useEffect } from "react";
 import { connect, useSelector } from "react-redux";
 import { loadCapsules } from "../redux/capsules/capsules.actions";
 
-import DisplayConsole from "../components/display-console/display-console";
 import ControlConsole from "../components/control-console/control-console";
-import { Container } from "./styles";
 
 function DashboardPage(props) {
   useEffect(() => {
